@@ -1,0 +1,148 @@
+{
+   "Projects": [
+     {
+       "nZoom": 0.75,
+       "nPositionX": -118.66666412,
+       "nPositionY": -158.66667175,
+       "nWidth": 1134.66666412,
+       "nHeight": 506.66667175,
+       "sProject": "WebApp.src",
+       "bShowWebApp": false,
+       "bShowHidden": false,
+       "Elements": [
+         {
+           "Name": "oDashboard",
+           "Position": {
+             "sX": "0",
+             "sY": "75"
+           },
+           "TabColor": {
+             "sColorDM": "#006EFF",
+             "sColorLM": "#006EFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEntrenadorView",
+           "Position": {
+             "sX": "360",
+             "sY": "62.5"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEquipoView",
+           "Position": {
+             "sX": "720",
+             "sY": "62.5"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oLigaView",
+           "Position": {
+             "sX": "1080",
+             "sY": "62.5"
+           },
+           "TabColor": {
+             "sColorDM": "#006EFF",
+             "sColorLM": "#006EFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oLogin",
+           "Position": {
+             "sX": "1440",
+             "sY": "62.5"
+           },
+           "TabColor": {
+             "sColorDM": "#006EFF",
+             "sColorLM": "#006EFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oPosicionView",
+           "Position": {
+             "sX": "1800",
+             "sY": "62.5"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oSelectEntrenador",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66667175"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oSelectEquipo",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oWebApp",
+           "Position": {
+             "sX": "2160",
+             "sY": "0"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oZoomEntrenador",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66667175"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oZoomEquipo",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         }
+       ]
+     }
+   ]
+ }
