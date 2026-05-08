@@ -107,6 +107,30 @@
            "bHidden": false
          },
          {
+           "Name": "oSelectLiga",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oSelectPosicion",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
            "Name": "oWebApp",
            "Position": {
              "sX": "2160",
@@ -132,6 +156,30 @@
          },
          {
            "Name": "oZoomEquipo",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oZoomLiga",
+           "Position": {
+             "sX": "448,66666794",
+             "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oZoomPosicion",
            "Position": {
              "sX": "448,66666794",
              "sY": "94,66666412"
