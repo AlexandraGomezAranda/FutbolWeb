@@ -8,7 +8,6 @@ Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebColumnButton.pkg
 Use cWebColumn.pkg
-Use ZoomPosicion.wo
 
 Use cposicionDataDictionary.dd
 
@@ -23,8 +22,8 @@ Object oSelectPosicion is a cWebView
     Object oposicion_DD is a cposicionDataDictionary
     End_Object 
 
-    Set Main_DD To oposicion_DD
-    Set Server  To oposicion_DD
+    Set Main_DD to oposicion_DD
+    Set Server  to oposicion_DD
 
 
     Object oList is a cWebList
@@ -38,7 +37,7 @@ Object oSelectPosicion is a cWebView
         Object oposicionNombre is a cWebColumn
             Entry_Item posicion.Nombre
             Set psCaption to "posicion.Nombre"
-            Set piWidth to 500
+            Set piWidth to 621
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
@@ -64,6 +63,8 @@ Object oSelectPosicion is a cWebView
 
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 //        WebRegisterPath ntNavigateForward oSelectView
+     
+        //WebRegisterPath ntNavigateForward oSelectview
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -74,6 +75,7 @@ Object oSelectPosicion is a cWebView
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
 //                    Send NavigateForward of oSelectView Self
+                    //Send NavigateForward of oSelectView Self - No tiene padres
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -88,6 +90,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
 //                    Send NavigateForward of oSelectView Self
+                    //Send NavigateForward of oSelectView Self - No tiene padres
 
             Case End
         End_Procedure

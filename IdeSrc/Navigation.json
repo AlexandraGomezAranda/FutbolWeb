@@ -2,10 +2,10 @@
    "Projects": [
      {
        "nZoom": 0.75,
-       "nPositionX": -118.66666412,
-       "nPositionY": -158.66667175,
-       "nWidth": 1134.66666412,
-       "nHeight": 506.66667175,
+       "nPositionX": -117.33333588,
+       "nPositionY": -261.33334351,
+       "nWidth": 1134.66664886,
+       "nHeight": 721.33334351,
        "sProject": "WebApp.src",
        "bShowWebApp": false,
        "bShowHidden": false,
@@ -15,42 +15,6 @@
            "Position": {
              "sX": "0",
              "sY": "75"
-           },
-           "TabColor": {
-             "sColorDM": "#006EFF",
-             "sColorLM": "#006EFF"
-           },
-           "bHidden": false
-         },
-         {
-           "Name": "oEntrenadorView",
-           "Position": {
-             "sX": "360",
-             "sY": "62.5"
-           },
-           "TabColor": {
-             "sColorDM": "#001634",
-             "sColorLM": "#CBE3FF"
-           },
-           "bHidden": false
-         },
-         {
-           "Name": "oEquipoView",
-           "Position": {
-             "sX": "720",
-             "sY": "62.5"
-           },
-           "TabColor": {
-             "sColorDM": "#0058CF",
-             "sColorLM": "#2B8CFF"
-           },
-           "bHidden": false
-         },
-         {
-           "Name": "oLigaView",
-           "Position": {
-             "sX": "1080",
-             "sY": "62.5"
            },
            "TabColor": {
              "sColorDM": "#006EFF",
@@ -71,22 +35,10 @@
            "bHidden": false
          },
          {
-           "Name": "oPosicionView",
-           "Position": {
-             "sX": "1800",
-             "sY": "62.5"
-           },
-           "TabColor": {
-             "sColorDM": "#0058CF",
-             "sColorLM": "#2B8CFF"
-           },
-           "bHidden": false
-         },
-         {
            "Name": "oSelectEntrenador",
            "Position": {
-             "sX": "448,66666794",
-             "sY": "94,66667175"
+             "sX": "449,99998855",
+             "sY": "94,66666412"
            },
            "TabColor": {
              "sColorDM": "#0058CF",
@@ -97,8 +49,20 @@
          {
            "Name": "oSelectEquipo",
            "Position": {
-             "sX": "448,66666794",
+             "sX": "449,99998855",
              "sY": "94,66666412"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oSelectJugador",
+           "Position": {
+             "sX": "450",
+             "sY": "96,00000762"
            },
            "TabColor": {
              "sColorDM": "#0058CF",
@@ -109,7 +73,7 @@
          {
            "Name": "oSelectLiga",
            "Position": {
-             "sX": "448,66666794",
+             "sX": "449,99998855",
              "sY": "94,66666412"
            },
            "TabColor": {
@@ -121,7 +85,7 @@
          {
            "Name": "oSelectPosicion",
            "Position": {
-             "sX": "448,66666794",
+             "sX": "449,99998855",
              "sY": "94,66666412"
            },
            "TabColor": {
@@ -145,8 +109,8 @@
          {
            "Name": "oZoomEntrenador",
            "Position": {
-             "sX": "448,66666794",
-             "sY": "94,66667175"
+             "sX": "450",
+             "sY": "97,33332824"
            },
            "TabColor": {
              "sColorDM": "#002C68",
@@ -167,10 +131,22 @@
            "bHidden": false
          },
          {
+           "Name": "oZoomJugador",
+           "Position": {
+             "sX": "450",
+             "sY": "96,00000762"
+           },
+           "TabColor": {
+             "sColorDM": "#002C68",
+             "sColorLM": "#97C6FF"
+           },
+           "bHidden": false
+         },
+         {
            "Name": "oZoomLiga",
            "Position": {
-             "sX": "448,66666794",
-             "sY": "94,66666412"
+             "sX": "450",
+             "sY": "97,33332824"
            },
            "TabColor": {
              "sColorDM": "#002C68",
@@ -181,8 +157,8 @@
          {
            "Name": "oZoomPosicion",
            "Position": {
-             "sX": "448,66666794",
-             "sY": "94,66666412"
+             "sX": "449,99998855",
+             "sY": "95,33333206"
            },
            "TabColor": {
              "sColorDM": "#002C68",

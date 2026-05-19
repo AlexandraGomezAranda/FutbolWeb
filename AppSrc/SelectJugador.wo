@@ -1,8 +1,10 @@
-﻿// C:\DataFlex Projects\FutbolWebApp\AppSrc\SelectEquipo.wo
-// SelectEquipo
+﻿// C:\DataFlex Projects\FutbolWebApp\AppSrc\SelectJugador.wo
+// SelectJugador
 //
 
 Use cWebView.pkg
+
+
 Use cWebList.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
@@ -11,9 +13,10 @@ Use cWebColumn.pkg
 
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
+Use cjugadorDataDictionary.dd
 
-Object oSelectEquipo is a cWebView
-    Set psCaption to "SelectEquipo"
+Object oSelectJugador is a cWebView
+    Set psCaption to "SelectJugador"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtSelect
     Set piColumnCount to 12
@@ -27,8 +30,12 @@ Object oSelectEquipo is a cWebView
         Set DDO_Server to oliga_DD
     End_Object 
 
-    Set Main_DD to oequipo_DD
-    Set Server  to oequipo_DD
+    Object ojugador_DD is a cjugadorDataDictionary
+        Set DDO_Server to oequipo_DD
+    End_Object 
+
+    Set Main_DD to ojugador_DD
+    Set Server  to ojugador_DD
 
 
     Object oList is a cWebList
@@ -39,16 +46,22 @@ Object oSelectEquipo is a cWebView
         Set pbShowHeader to False
         Set piSortColumn to 0
 
-        Object oequipoNombre is a cWebColumn
-            Entry_Item equipo.Nombre
-            Set psCaption to "equipo.Nombre"
-            Set piWidth to 1491
+        Object ojugadorNombre is a cWebColumn
+            Entry_Item jugador.Nombre
+            Set psCaption to "jugador.Nombre"
+            Set piWidth to 745
         End_Object 
 
-        Object oligaID is a cWebColumn
-            Entry_Item liga.ID
-            Set psCaption to "equipo.LigaID"
-            Set piWidth to 124
+        Object ojugadorApellido is a cWebColumn
+            Entry_Item jugador.Apellido
+            Set psCaption to "jugador.Apellido"
+            Set piWidth to 745
+        End_Object 
+
+        Object ojugadorNacionalidad is a cWebColumn
+            Entry_Item jugador.Nacionalidad
+            Set psCaption to "jugador.Nacionalidad"
+            Set piWidth to 621
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
@@ -60,7 +73,7 @@ Object oSelectEquipo is a cWebView
             Set psBtnCssClass to "WebButtonIcon WebIcon_Info"
             Set peAlign to alignRight
 
-            WebRegisterPath ntNavigateForward oZoomEquipo
+            WebRegisterPath ntNavigateForward oZoomJugador
 
             Procedure OnClick
                 Send NavigatePath
@@ -74,9 +87,9 @@ Object oSelectEquipo is a cWebView
 
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 //        WebRegisterPath ntNavigateForward oSelectView
-        
-        //es selectLiga pq es su padre, es decir Equipo depende de Liga
-        WebRegisterPath ntNavigateForward oSelectLiga 
+            
+            // El padre de jugador es Equipo
+            WebRegisterPath ntNavigateForward oSelectEquipo
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -87,7 +100,7 @@ Object oSelectEquipo is a cWebView
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
 //                    Send NavigateForward of oSelectView Self
-                    Send NavigateForward of oSelectLiga Self //Liga(Padre)
+                   Send NavigateForward of oSelectEquipo Self //Equipo(Padre)
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -102,7 +115,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
 Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
 //                    Send NavigateForward of oSelectView Self
-                    Send NavigateForward of oSelectLiga Self //Liga(Padre)
+                    Send NavigateForward of oSelectEquipo Self //(Equipo(Padre)
 
             Case End
         End_Procedure
@@ -129,7 +142,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
             Set psCSSClass to "WebClearMenuItem"
             Set psCaption to "New"
 
-            WebRegisterPath ntNavigateForward oZoomEquipo
+            WebRegisterPath ntNavigateForward oZoomJugador
 
             Procedure OnClick
                 Send NavigatePath
