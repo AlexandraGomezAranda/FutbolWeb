@@ -1,0 +1,43 @@
+[Workspace]
+CurrentProject=WebApp.src
+Location=C:\DataFlex Projects\FutbolWA\IdeSrc\PepeTolete_Studio.dsk
+CreateNew=-1
+[TabWindows]
+GroupCount=1
+HorizontalGroups=1
+[TabGroup0]
+GroupSize=40
+SelectedTab=1
+[Window0]
+Filename=C:\DataFlex Projects\FutbolAlexandraApp\FutbolAlexandraApp.sws
+ViewType=1
+Top=21
+Left=0
+Bottom=413
+Right=904
+CursorLine=7
+CursorColumn=14
+TabIndex=0
+TabGroup=0
+[Window1]
+Filename=C:\DataFlex Projects\FutbolWA\AppSrc\WebApp.src
+ViewType=1
+Top=21
+Left=0
+Bottom=413
+Right=904
+CursorLine=142
+CursorColumn=19
+TabIndex=2
+TabGroup=0
+[Window2]
+Filename=C:\DataFlex Projects\FutbolWA\AppSrc\Dashboard.wo
+ViewType=1
+Top=21
+Left=0
+Bottom=413
+Right=904
+CursorLine=74
+CursorColumn=15
+TabIndex=1
+TabGroup=0

@@ -1,0 +1,183 @@
+////////////////////////////////////////////////////////////
+Starting conversion at 21/05/2026 13:50:24,232
+////////////////////////////////////////////////////////////
+
+------------------------------------------------------------
+Converting Recnum table: 253, CodeType, Code Maintenance Type Table
+Progress:Start time: 21/05/2026 13:50:24,235
+Start time: 21/05/2026 13:50:24,235
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Progress:Creating intermediate file.
+Creating intermediate file.
+CLI_DROPINDICES
+Progress:Temporary delete of all indices of table codetype.
+Temporary delete of all indices of table codetype.
+Progress:Dropping primary key PRIMARY.
+Dropping primary key PRIMARY.
+Progress:Copying record
+Progress:All 0 records copied.
+All 0 records copied.
+CLI_CREATEINDICES
+Progress:Re-creating temporary deleted indices of table codetype.
+Re-creating temporary deleted indices of table codetype.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Close hSQLTable
+Close ahTables[iCount]
+Adjust filelist slot
+Output_def_file
+Progress:End time: 21/05/2026 13:50:24,359
+End time: 21/05/2026 13:50:24,359
+Progress:Total time to convert table: 0:0:0:0,124
+Total time to convert table: 0:0:0:0,124
+
+------------------------------------------------------------
+Converting Recnum table: 254, CodeMast, Code Maintenance Code Table
+Progress:Start time: 21/05/2026 13:50:24,361
+Start time: 21/05/2026 13:50:24,361
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Progress:Creating intermediate file.
+Creating intermediate file.
+CLI_DROPINDICES
+Progress:Temporary delete of all indices of table codemast.
+Temporary delete of all indices of table codemast.
+Progress:Dropping primary key PRIMARY.
+Dropping primary key PRIMARY.
+Progress:Copying record
+Progress:All 0 records copied.
+All 0 records copied.
+CLI_CREATEINDICES
+Progress:Re-creating temporary deleted indices of table codemast.
+Re-creating temporary deleted indices of table codemast.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Close hSQLTable
+Close ahTables[iCount]
+Adjust filelist slot
+Output_def_file
+Progress:End time: 21/05/2026 13:50:24,467
+End time: 21/05/2026 13:50:24,467
+Progress:Total time to convert table: 0:0:0:0,106
+Total time to convert table: 0:0:0:0,106
+
+------------------------------------------------------------
+Converting Recnum table: 263, WebAppSession, WebApp Session
+Progress:Start time: 21/05/2026 13:50:24,469
+Start time: 21/05/2026 13:50:24,469
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Progress:Creating index WebAppSession002.
+Creating index WebAppSession002.
+Progress:Creating index WebAppSession003.
+Creating index WebAppSession003.
+Progress:Creating intermediate file.
+Creating intermediate file.
+CLI_DROPINDICES
+Progress:Temporary delete of all indices of table webappsession.
+Temporary delete of all indices of table webappsession.
+Progress:Dropping primary key PRIMARY.
+Dropping primary key PRIMARY.
+Progress:Dropping index WebAppSession002.
+Dropping index WebAppSession002.
+Progress:Dropping index WebAppSession003.
+Dropping index WebAppSession003.
+Progress:Copying record
+Progress:All 1 records copied.
+All 1 records copied.
+CLI_CREATEINDICES
+Progress:Re-creating temporary deleted indices of table webappsession.
+Re-creating temporary deleted indices of table webappsession.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Progress:Creating index WebAppSession002.
+Creating index WebAppSession002.
+Progress:Creating index WebAppSession003.
+Creating index WebAppSession003.
+Close hSQLTable
+Close ahTables[iCount]
+Adjust filelist slot
+Output_def_file
+Progress:End time: 21/05/2026 13:50:24,729
+End time: 21/05/2026 13:50:24,729
+Progress:Total time to convert table: 0:0:0:0,26
+Total time to convert table: 0:0:0:0,26
+
+------------------------------------------------------------
+Converting Recnum table: 264, WebAppUser, WebApp User
+Progress:Start time: 21/05/2026 13:50:24,731
+Start time: 21/05/2026 13:50:24,731
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Progress:Creating intermediate file.
+Creating intermediate file.
+CLI_DROPINDICES
+Progress:Temporary delete of all indices of table webappuser.
+Temporary delete of all indices of table webappuser.
+Progress:Dropping primary key PRIMARY.
+Dropping primary key PRIMARY.
+Progress:Copying record
+Progress:All 1 records copied.
+All 1 records copied.
+CLI_CREATEINDICES
+Progress:Re-creating temporary deleted indices of table webappuser.
+Re-creating temporary deleted indices of table webappuser.
+Progress:Creating primary key PRIMARY.
+Creating primary key PRIMARY.
+Close hSQLTable
+Close ahTables[iCount]
+Adjust filelist slot
+Output_def_file
+Progress:End time: 21/05/2026 13:50:24,872
+End time: 21/05/2026 13:50:24,872
+Progress:Total time to convert table: 0:0:0:0,141
+Total time to convert table: 0:0:0:0,141
+////////////////////////////////////////////////////////////
+Finished conversion at 21/05/2026 13:50:24,873
+Total conversion time: 0:0:0:0,639
+////////////////////////////////////////////////////////////
