@@ -42,7 +42,7 @@ Object oDashboard is a cWebView
         WebSetResponsive piColumnCount rmMobile to 1
         WebSetResponsive piColumnCount rmTabletPortrait to 16
     
-        Object oTiles_grp is a cWebGroup
+       Object oTiles_grp is a cWebGroup
             Set piColumnSpan to 25
             Set pbShowBorder to False
             Set pbShowCaption to False
@@ -50,7 +50,7 @@ Object oDashboard is a cWebView
             
             Set psCSSClass to "TilesGroup"
     
-            Object oBienvenido_Tile is a cWebHtmlBox //Bienvenido/a
+            Object oBienvenido_Tile is a cWebHtmlBox 
                 Set piColumnSpan to 25
                 Set psCSSClass to "Tile Light"
                 Set psHtml to '<div Class="WebCon_Sizer"><div class="Tile_Title">Bienvenido/a</div><div Class="Tile_Subtitle"></div></div>'
@@ -66,24 +66,24 @@ Object oDashboard is a cWebView
             End_Object
 
 
-            Object oSelectEquipo_Tile is a cWebHtmlBox //Equipo
+            Object oSelectEquipo_Tile is a cWebHtmlBox 
                 Set pbServerOnClick to True
                 Set piColumnSpan to 5
                 Set piColumnIndex to 0
                 Set psCSSClass to "Tile LightAlternate"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Equipo</div><div class="Tile_Subtitle"></div></div>'
                
-                    
+                             
                 WebRegisterPath ntNavigateForwardCustom oSelectEquipo 
                 
-                //Empieza la navegación con el NavigatePath y el WebResgisterPath le dice el camino que tiene que hacer.
+               
                 Procedure OnClick String sId String sParam 
                     Send NavigatePath //Navego con el Navigate
                 End_Procedure
                 
             End_Object   
             
-            Object oSelectEntrenador_Tile is a cWebHtmlBox //Entrenador
+            Object oSelectEntrenador_Tile is a cWebHtmlBox 
                 Set pbServerOnClick to True
                 Set piColumnSpan to 5
                 Set piColumnIndex to 5
@@ -99,7 +99,7 @@ Object oDashboard is a cWebView
                 
             End_Object
 
-            Object oSelectJugador_Tile is a cWebHtmlBox //Jugador
+            Object oSelectJugador_Tile is a cWebHtmlBox 
                 Set pbServerOnClick to True
                 Set piColumnSpan to 5
                 Set piColumnIndex to 10
@@ -114,7 +114,7 @@ Object oDashboard is a cWebView
                 
             End_Object
 
-            Object oSelectPosicion_Tile is a cWebHtmlBox //Posicion
+            Object oSelectPosicion_Tile is a cWebHtmlBox 
                 Set pbServerOnClick to True
                 Set piColumnSpan to 5
                 Set piColumnIndex to 15
@@ -149,7 +149,7 @@ Object oDashboard is a cWebView
         
     End_Object
     
-  
+
     Procedure OnBeforeShow
         // Each time this view is shown we will update the appropriate information.
     End_Procedure

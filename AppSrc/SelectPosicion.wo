@@ -8,7 +8,11 @@ Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebColumnButton.pkg
 Use cWebColumn.pkg
+Use ZoomPosicion.wo
+Use ZoomJugador.wo
 
+
+Use cjugadorposicionDataDictionary.dd
 Use cposicionDataDictionary.dd
 
 Object oSelectPosicion is a cWebView
@@ -41,7 +45,7 @@ Object oSelectPosicion is a cWebView
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
-            Set psCaption to "btn"
+            Set psCaption to "Detalles"
             Set piWidth to 45
             Set pbFixedWidth to True
             Set pbResizable to False
@@ -60,10 +64,8 @@ Object oSelectPosicion is a cWebView
             End_Procedure
 
         End_Object 
-
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-//        WebRegisterPath ntNavigateForward oSelectView
-     
+        
+       
         //WebRegisterPath ntNavigateForward oSelectview
 
         Procedure OnRowClick String sRowId
@@ -72,10 +74,7 @@ Object oSelectPosicion is a cWebView
 
             Case Begin
                 Case (NavigateData.eNavigateType = nfFromParent)
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
-//                    Send NavigateForward of oSelectView Self
-                    //Send NavigateForward of oSelectView Self - No tiene padres
+                    //Send NavigateForward of oSelectView Self
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -87,10 +86,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
                     Case Break
 
                 Case Else // must be nfUndefined
-// ToDo: Fill in the from-parent child Select view object name for navigate forward
-Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not yet defined"
-//                    Send NavigateForward of oSelectView Self
-                    //Send NavigateForward of oSelectView Self - No tiene padres
+                    //Send NavigateForward of oSelectView Self
 
             Case End
         End_Procedure
@@ -157,3 +153,4 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
 
 
 End_Object 
+

@@ -11,6 +11,7 @@ Use cWebForm.pkg
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
 Use centrenadorDataDictionary.dd
+Use cWebButton.pkg
 
 Object oZoomEntrenador is a cWebView
     Set piColumnCount to 12
@@ -21,34 +22,42 @@ Object oZoomEntrenador is a cWebView
     Set Verify_Save_Msg to 0
     Set piMaxWidth to 1024
 
-    Object oliga_DD is a cligaDataDictionary
+    Object oliga_DD is a cligaDataDictionary 
     End_Object 
-
-    //Equipo tienen una FK a Liga. La de arriba
-    Object oequipo_DD is a cequipoDataDictionary
+ 
+    Object oequipo_DD is a cequipoDataDictionary 
         Set DDO_Server to oliga_DD
     End_Object 
-
-    //Entrenador tiene una FK a Equipo. La de arriba
-    Object oentrenador_DD is a centrenadorDataDictionary
+   
+    Object oentrenador_DD is a centrenadorDataDictionary 
         Set DDO_Server to oequipo_DD
     End_Object 
-
-    Set Main_DD to oentrenador_DD
+   
+    Set Main_DD to oentrenador_DD 
     Set Server  to oentrenador_DD
 
 
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 12
-        WebSetResponsive piColumnCount rmMobile to 4
+        WebSetResponsive piColumnCount rmMobile to 6
+        
+        Object obuttonDespedir is a cWebButton
+            Set piColumnSpan to 2
+            Set piColumnIndex to 0
+            Set psCaption to "Despedir"
+        
+            Procedure OnClick
+                Forward Send OnClick
+                    Send Request_ClearBindingTable of oNombreEquipo
+            End_Procedure
+        End_Object
 
         Object oentrenadorNombre is a cWebForm
             Entry_Item entrenador.Nombre
             Set piColumnSpan to 12
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
-            Set psLabel to "Nombre"
-            Set psLabel to "Nombre del Nuevo entrenador"
+            Set psLabel to "Nombre Nuevo entrenador"
         End_Object 
 
         Object oentrenadorApellido is a cWebForm
@@ -56,46 +65,71 @@ Object oZoomEntrenador is a cWebView
             Set piColumnSpan to 12
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
-            Set psLabel to "Apellido"
-            Set psLabel to "Apellido del Nuevo entrenador"
+            Set psLabel to "Apellido Nuevo entrenador"
         End_Object 
 
+        Object oInfoGroup is a cWebGroup
+            Set piColumnCount to 12
+            Set piColumnSpan to 12
+            Set psCaption to "Información Entrenador"
+            
+            WebSetResponsive piColumnCount rmMobile to 1
+            
         Object oentrenadorNacionalidad is a cWebForm
             Entry_Item entrenador.Nacionalidad
-            Set piColumnSpan to 10
-            Set piColumnSpan to 12
+            Set piColumnSpan to 6
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nacionalidad"
-            Set psLabel to "Su Nacionalidad"
         End_Object 
         
-        //Probando - Añadido webform para guardar nuevos entrenadores
+           Object oEquipoForm is a cWebForm
+            Entry_Item equipo.Nombre
+            Set piColumnCount to 6
+            Set psLabel to "Equipo"
+            Set peLabelPosition to lpTop
+            Set pbPromptButton to True
+               Set piColumnIndex to 6
+               Set piColumnSpan to 6
+           End_Object
+           
+      
         Object oNombreEquipo is a cWebForm
             Entry_Item equipo.Nombre
             Set piColumnSpan to 12
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
-            Set psLabel to "¿A qué Equipo pertenece?"
-            Set pbPromptButton to True
+            Set psLabel to "¿A qué Equipo pertenece? Un entrenador solo puede pertenecer a un equipo."
+            Set pbPromptButton to True 
             
+          
             WebRegisterPath ntNavigateForward oSelectEquipo
             Procedure OnPrompt
                 Send NavigatePath
             End_Procedure
+        End_Object          
+                   
+           
+           WebRegisterPath ntNavigateForward oSelectEquipo
+           
+           Procedure OnPrompt
+            Forward Send OnPrompt
+            Send NavigatePath
+           End_Procedure
             
         End_Object
-        
+               
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
-
+        
         Object oSaveBtn is a cWebMenuItem
             Set psCSSClass to "WebSaveMenuItem"
             Set psCaption to "Save"
 
             Procedure OnClick
-                Send Request_Save
+                Send Request_Save of oentrenador_DD
+                Send NavigateClose Self
             End_Procedure
 
         End_Object 
@@ -167,6 +201,7 @@ Object oZoomEntrenador is a cWebView
         Send NavigateClose Self
     End_Procedure
 
+  
     Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
         Case Begin
             Case (NavigateData.eNavigateType = nfFromMain)
@@ -186,7 +221,16 @@ Object oZoomEntrenador is a cWebView
         Case End
 
         Send SetActionButtons
-
+        
+      
+        If (HasRecord(Server(Self))) Begin
+            Send SetHeaderCaption   ("Entrenador:"*entrenador.Nombre)
+            Send SetBreadcrumbCaption entrenador.Nombre
+        End
+        Else Begin
+            Send SetHeaderCaption   "Nuevo entrenador"
+            Send SetBreadcrumbCaption "Nuevo"
+        End 
     End_Procedure
 
 End_Object 
